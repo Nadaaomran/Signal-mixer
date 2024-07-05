@@ -171,6 +171,81 @@ class Ui_MainWindow(object):
         self.current_rect = None
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        style_sheet = """
+            QWidget {
+                font-family: Arial, sans-serif;
+                font-size: 10pt;
+            }
+            QPushButton {
+                border: 1px solid #8f8f91;
+                border-radius: 5px;
+                background-color: #e6e6e6;
+                padding: 5px;
+            }
+            QPushButton:hover {
+                background-color: #f0f0f0;
+            }
+            QPushButton:pressed {
+                background-color: #d4d4d4;
+            }
+            QComboBox {
+                border: 1px solid #8f8f91;
+                border-radius: 5px;
+                padding: 1px 18px 1px 3px;
+                min-width: 6em;
+            }
+            QComboBox:editable {
+                background: white;
+            }
+            QComboBox:!editable, QComboBox::drop-down:editable {
+                background: #e6e6e6;
+            }
+            QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+                background: #f0f0f0;
+            }
+            QComboBox::drop-down {
+                subcontrol-origin: padding;
+                subcontrol-position: top right;
+                width: 15px;
+                border-left: none; /* Remove the border */
+            }
+            QComboBox::down-arrow {
+                width: 15px;
+                height: 15px;
+                image: url(down_arrow.png);
+            }
+            QSlider::groove:horizontal {
+                border: 1px solid #999999;
+                height: 8px;
+                background: #d4d4d4;
+                margin: 2px 0;
+                border-radius: 5px;
+            }
+            QSlider::handle:horizontal {
+                background: #8f8f91;
+                border: 1px solid #5c5c5c;
+                width: 18px;
+                margin: -2px 0;
+                border-radius: 5px;
+            }
+            QCheckBox {
+                spacing: 5px;
+            }
+            QCheckBox::indicator {
+                width: 13px;
+                height: 13px;
+                border: 1px solid #8f8f91;
+                border-radius: 3px;
+            }
+            QCheckBox::indicator:unchecked {
+                background: #e6e6e6;
+            }
+            QCheckBox::indicator:checked {
+                background: #b1b1b1; 
+            }
+        """
+        # Apply the style sheet to the entire application
+        self.centralwidget.setStyleSheet(style_sheet)
         self.gridLayout_10 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -605,7 +680,7 @@ class Ui_MainWindow(object):
         return mag_weighted_ft, phase_weighted_ft
     def display_output(self, index, value):
         cv2.imwrite('test.jpg', value)
-        image= cv2.imread(r'C:\Users\DELL\Downloads\test.jpg', cv2.IMREAD_GRAYSCALE)
+        image= cv2.imread(r'test.jpg', cv2.IMREAD_GRAYSCALE)
         # Scale the output image for display
         output_image = cv2.normalize(image, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8UC1)
 
