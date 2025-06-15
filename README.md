@@ -39,4 +39,34 @@ The Signal Mixer is a desktop application designed and implemented using PyQt5. 
 ### Real-time Mixing
 
 - **Operation Handling**: Automatically cancels the previous operation if the user initiates a new request while the previous one is still running.
+## Contributers
+
+<table>
+  <tr>
+   <td align="center">
+      <a href="https://github.com/Nadaaomran">
+        <img src="https://avatars.githubusercontent.com/u/104179154?v=4" width="100px;" alt="Nada"/>
+        <br />
+        <sub><b>Nada Omran</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/hadeerfasih">
+        <img src="https://avatars.githubusercontent.com/u/104545742?v=4" width="100px;" alt="Hadeer"/>
+        <br />
+        <sub><b>Hadeer Fasih</b></sub>
+      </a>
+      <br />
+    </td>
+   <td align="center">
+      <a href="https://github.com/Mariam-Hatem">
+        <img src="https://avatars.githubusercontent.com/u/115348754?v=4" width="100px;" alt="Mariam"/>
+        <br />
+        <sub><b>Mariam Hatem</b></sub>
+      </a>
+      <br />
+
+  </tr>
+</table>
 
